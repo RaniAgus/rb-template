@@ -6,7 +6,7 @@ class Golondrina
   end
 
   def volar(km)
-    raise GolondrinaCansadaError.new "Puede volar hasta #{@energia / 3}km" unless @energia >= 3 * km
+    raise GolondrinaCansadaError, "Puede volar hasta #{@energia / 3}km" unless @energia >= 3 * km
     @energia -= 3 * km
   end
 
